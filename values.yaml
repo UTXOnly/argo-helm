@@ -1,0 +1,5 @@
+datadog:
+  apiKeyExistingSecret: datadog-agent
+  # Disable kubelet TLS Verification in minikube
+  kubelet:
+    tlsVerify: false
