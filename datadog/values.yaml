@@ -1,5 +1,7 @@
 datadog:
   apiKeyExistingSecret: dd-helm-test
+  appKeyExistingSecret: dd-helm-test
   # Disable kubelet TLS Verification in minikube
+  #test
   kubelet:
     tlsVerify: false
