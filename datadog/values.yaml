@@ -1,7 +1,7 @@
 datadog:
-  apiKey: "ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]"
-  #apiKeyExistingSecret: "ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]" #dd-helm-test
-  #appKeyExistingSecret: ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]
+  #apiKey: "ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]"
+  apiKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]" #dd-helm-test
+  appKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]"
   secretBackend:
     command: "/readsecret_multiple_providers.sh"
   #apiKeyExistingSecret: dd-helm-test
