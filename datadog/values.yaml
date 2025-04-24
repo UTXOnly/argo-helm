@@ -1,6 +1,6 @@
 datadog:
   apiKeyExistingSecret: ENC[k8s_secret@datadog-helm/dd-helm-test/api-key] #dd-helm-test
-  appKeyExistingSecret: dENC[k8s_secret@datadog-helm/dd-helm-test/app-key]
+  appKeyExistingSecret: ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]
   # Disable kubelet TLS Verification in minikube
   #test
   kubelet:
