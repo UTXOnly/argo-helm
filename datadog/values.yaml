@@ -1,12 +1,18 @@
 datadog:
   #apiKey: "ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]"
-  apiKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]" #dd-helm-test
-  appKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]"
+  #apiKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]" #dd-helm-test
+  #appKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]"
   secretBackend:
     command: "/readsecret_multiple_providers.sh"
   #apiKeyExistingSecret: dd-helm-test
   logLevel: debug
   # Disable kubelet TLS Verification in minikube
+  env:
+    - name: DD_API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: dd-helm-test
+          key: api-key
   #test
   kubelet:
     tlsVerify: false
