@@ -16,3 +16,11 @@ datadog:
   #test
   kubelet:
     tlsVerify: false
+clusterAgent:
+
+  env:
+    - name: DD_API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: dd-helm-test
+          key: api-key
