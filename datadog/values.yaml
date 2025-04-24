@@ -3,7 +3,7 @@ datadog:
   appKeyExistingSecret: ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]
   secretBackend:
     command: "/readsecret_multiple_providers.sh"
-  log_level: debug
+  logLevel: debug
   # Disable kubelet TLS Verification in minikube
   #test
   kubelet:
