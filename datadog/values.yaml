@@ -1,10 +1,10 @@
 datadog:
-  #apiKey: "test"
+  apiKey: "ENC[k8s_secret@datadog-helm/my-api-key-secret/api-key]"
   #apiKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/api-key]" #dd-helm-test
   #appKeyExistingSecret: dd-helm-test #"ENC[k8s_secret@datadog-helm/dd-helm-test/app-key]"
   #secretBackend:
   #  command: "/readsecret_multiple_providers.sh"
-  apiKeyExistingSecret: my-api-key-secret #dd-helm-test
+  #apiKeyExistingSecret: my-api-key-secret #dd-helm-test
   logLevel: debug
   kubelet:
     tlsVerify: false
