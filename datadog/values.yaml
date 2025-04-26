@@ -8,4 +8,4 @@ datadog:
   logLevel: debug
   kubelet:
     tlsVerify: false
-clusterAgent:
+
